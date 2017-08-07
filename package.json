@@ -1,0 +1,16 @@
+{
+  "name": "node_vaas",
+  "version": "1.0.0",
+  "description": "Vaporware As A Service",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "X Coan",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.3"
+  }
+}
