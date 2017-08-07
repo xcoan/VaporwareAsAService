@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html')
 })
 
-app.get('/app', (req, res) => {
+app.get('/app/:format?', (req, res) => {
   var prefixes = ['Script', 'Cable', 'Disrupt', 'Innovate', 'Doge']
   var suffixes = ['.io', 'Bucket', 'Maker', 'Ly', 'Pan', 'Ware', 'Code']
   var buzz1 = ["n IOT", " Social Media", " Data Mining", " Cryptocurrency"]
@@ -32,10 +32,13 @@ app.get('/app', (req, res) => {
     'appname': pref + suff,
     'description': 'A' + buzzA + ' app for managing your ' + buzzB + ' using the latest ' + buzzC + '.'
   }
-  res.render('app.ejs', {app: json})
+  if (req.params.format) {
+    res.json(json)
+  } else
+    res.render('app.ejs', {app: json})
 })
 
-app.get('/update', (req, res) => {
+app.get('/update/:format?', (req, res) => {
   var titles = ['Exciting News!', 'A Minor Setback', 'A Quick Update']
   var intros = ['Greeting Backers!', 'Hello Supporters.', 'Dear Beloved Fans.']
   var adj = ['productive', 'hectic']
@@ -56,5 +59,8 @@ app.get('/update', (req, res) => {
     'title': title,
     'body': intro + firstLine + secondLine + thirdLine + ending
   }
-  res.render('update.ejs', {update: json})
+  if (req.params.format) {
+    res.json(json)
+  } else
+    res.render('update.ejs', {update: json})
 })
