@@ -32,7 +32,7 @@ app.get('/app/:format?', (req, res) => {
     'appname': pref + suff,
     'description': 'A' + buzzA + ' app for managing your ' + buzzB + ' using the latest ' + buzzC + '.'
   }
-  if (req.params.format) {
+  if (req.params.format == 'json') {
     res.json(json)
   } else
     res.render('app.ejs', {app: json})
@@ -59,7 +59,7 @@ app.get('/update/:format?', (req, res) => {
     'title': title,
     'body': intro + firstLine + secondLine + thirdLine + ending
   }
-  if (req.params.format) {
+  if (req.params.format == 'json') {
     res.json(json)
   } else
     res.render('update.ejs', {update: json})
