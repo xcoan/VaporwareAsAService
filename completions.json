@@ -1,0 +1,727 @@
+{
+  "components": {
+    "CalendarDay": {
+      "attributes": [
+        "day",
+        "disabled",
+        "onClick",
+        "selectedDate",
+        "sundayFirstDayOfWeek",
+        "theme",
+        "viewDate"
+      ],
+      "props": {
+        "day": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
+        "disabled": {
+          "type": {
+            "name": "bool"
+          },
+          "required": false,
+          "description": ""
+        },
+        "onClick": {
+          "type": {
+            "name": "func"
+          },
+          "required": false,
+          "description": ""
+        },
+        "selectedDate": {
+          "type": {
+            "name": "instanceOf",
+            "value": "Date"
+          },
+          "required": false,
+          "description": ""
+        },
+        "sundayFirstDayOfWeek": {
+          "type": {
+            "name": "bool"
+          },
+          "required": false,
+          "description": ""
+        },
+        "theme": {
+          "type": {
+            "name": "shape",
+            "value": {
+              "active": {
+                "name": "string",
+                "required": false
+              },
+              "day": {
+                "name": "string",
+                "required": false
+              },
+              "disabled": {
+                "name": "string",
+                "required": false
+              }
+            }
+          },
+          "required": false,
+          "description": ""
+        },
+        "viewDate": {
+          "type": {
+            "name": "instanceOf",
+            "value": "Date"
+          },
+          "required": false,
+          "description": ""
+        }
+      }
+    },
+    "CalendarMonth": {
+      "attributes": [
+        "disabledDates",
+        "enabledDates",
+        "locale",
+        "maxDate",
+        "minDate",
+        "onDayClick",
+        "selectedDate",
+        "sundayFirstDayOfWeek",
+        "theme",
+        "viewDate"
+      ],
+      "props": {
+        "disabledDates": {
+          "type": {
+            "name": "arrayOf",
+            "value": {
+              "name": "instanceOf",
+              "value": "Date"
+            }
+          },
+          "required": false,
+          "description": "",
+          "defaultValue": {
+            "value": "[]",
+            "computed": false
+          }
+        },
+        "enabledDates": {
+          "type": {
+            "name": "arrayOf",
+            "value": {
+              "name": "instanceOf",
+              "value": "Date"
+            }
+          },
+          "required": false,
+          "description": "",
+          "defaultValue": {
+            "value": "[]",
+            "computed": false
+          }
+        },
+        "locale": {
+          "type": {
+            "name": "union",
+            "value": [
+              {
+                "name": "string"
+              },
+              {
+                "name": "object"
+              }
+            ]
+          },
+          "required": false,
+          "description": ""
+        },
+        "maxDate": {
+          "type": {
+            "name": "instanceOf",
+            "value": "Date"
+          },
+          "required": false,
+          "description": ""
+        },
+        "minDate": {
+          "type": {
+            "name": "instanceOf",
+            "value": "Date"
+          },
+          "required": false,
+          "description": ""
+        },
+        "onDayClick": {
+          "type": {
+            "name": "func"
+          },
+          "required": false,
+          "description": ""
+        },
+        "selectedDate": {
+          "type": {
+            "name": "instanceOf",
+            "value": "Date"
+          },
+          "required": false,
+          "description": ""
+        },
+        "sundayFirstDayOfWeek": {
+          "type": {
+            "name": "bool"
+          },
+          "required": false,
+          "description": ""
+        },
+        "theme": {
+          "type": {
+            "name": "shape",
+            "value": {
+              "days": {
+                "name": "string",
+                "required": false
+              },
+              "month": {
+                "name": "string",
+                "required": false
+              },
+              "title": {
+                "name": "string",
+                "required": false
+              },
+              "week": {
+                "name": "string",
+                "required": false
+              }
+            }
+          },
+          "required": false,
+          "description": ""
+        },
+        "viewDate": {
+          "type": {
+            "name": "instanceOf",
+            "value": "Date"
+          },
+          "required": false,
+          "description": ""
+        }
+      }
+    },
+    "Portal": {
+      "attributes": [
+        "children",
+        "className",
+        "container",
+        "style"
+      ],
+      "props": {
+        "children": {
+          "type": {
+            "name": "node"
+          },
+          "required": false,
+          "description": ""
+        },
+        "className": {
+          "type": {
+            "name": "string"
+          },
+          "required": false,
+          "description": "",
+          "defaultValue": {
+            "value": "''",
+            "computed": false
+          }
+        },
+        "container": {
+          "type": {
+            "name": "node"
+          },
+          "required": false,
+          "description": ""
+        },
+        "style": {
+          "type": {
+            "name": "custom",
+            "raw": "styleShape"
+          },
+          "required": false,
+          "description": ""
+        }
+      }
+    },
+    "Clock": {
+      "attributes": [
+        "display",
+        "format",
+        "onChange",
+        "onHandMoved",
+        "theme",
+        "time",
+        "className"
+      ],
+      "props": {
+        "display": {
+          "type": {
+            "name": "enum",
+            "value": [
+              {
+                "value": "'hours'",
+                "computed": false
+              },
+              {
+                "value": "'minutes'",
+                "computed": false
+              }
+            ]
+          },
+          "required": false,
+          "description": "",
+          "defaultValue": {
+            "value": "'hours'",
+            "computed": false
+          }
+        },
+        "format": {
+          "type": {
+            "name": "enum",
+            "value": [
+              {
+                "value": "'24hr'",
+                "computed": false
+              },
+              {
+                "value": "'ampm'",
+                "computed": false
+              }
+            ]
+          },
+          "required": false,
+          "description": "",
+          "defaultValue": {
+            "value": "'24hr'",
+            "computed": false
+          }
+        },
+        "onChange": {
+          "type": {
+            "name": "func"
+          },
+          "required": false,
+          "description": ""
+        },
+        "onHandMoved": {
+          "type": {
+            "name": "func"
+          },
+          "required": false,
+          "description": ""
+        },
+        "theme": {
+          "type": {
+            "name": "shape",
+            "value": {
+              "clock": {
+                "name": "string",
+                "required": false
+              },
+              "clockWrapper": {
+                "name": "string",
+                "required": false
+              },
+              "placeholder": {
+                "name": "string",
+                "required": false
+              }
+            }
+          },
+          "required": false,
+          "description": ""
+        },
+        "time": {
+          "type": {
+            "name": "instanceOf",
+            "value": "Date"
+          },
+          "required": false,
+          "description": "",
+          "defaultValue": {
+            "value": "new Date()",
+            "computed": false
+          }
+        },
+        "className": {
+          "defaultValue": {
+            "value": "''",
+            "computed": false
+          },
+          "required": false
+        }
+      }
+    },
+    "ClockFace": {
+      "attributes": [
+        "active",
+        "numbers",
+        "radius",
+        "spacing",
+        "theme",
+        "twoDigits"
+      ],
+      "props": {
+        "active": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": "",
+          "defaultValue": {
+            "value": "null",
+            "computed": false
+          }
+        },
+        "numbers": {
+          "type": {
+            "name": "arrayOf",
+            "value": {
+              "name": "number"
+            }
+          },
+          "required": false,
+          "description": "",
+          "defaultValue": {
+            "value": "[]",
+            "computed": false
+          }
+        },
+        "radius": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": "",
+          "defaultValue": {
+            "value": "0",
+            "computed": false
+          }
+        },
+        "spacing": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
+        "theme": {
+          "type": {
+            "name": "shape",
+            "value": {
+              "active": {
+                "name": "string",
+                "required": false
+              },
+              "face": {
+                "name": "string",
+                "required": false
+              },
+              "number": {
+                "name": "string",
+                "required": false
+              }
+            }
+          },
+          "required": false,
+          "description": ""
+        },
+        "twoDigits": {
+          "type": {
+            "name": "bool"
+          },
+          "required": false,
+          "description": "",
+          "defaultValue": {
+            "value": "false",
+            "computed": false
+          }
+        }
+      }
+    },
+    "ClockHand": {
+      "attributes": [
+        "angle",
+        "className",
+        "length",
+        "onMove",
+        "onMoved",
+        "origin",
+        "step",
+        "theme"
+      ],
+      "props": {
+        "angle": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": "",
+          "defaultValue": {
+            "value": "0",
+            "computed": false
+          }
+        },
+        "className": {
+          "type": {
+            "name": "string"
+          },
+          "required": false,
+          "description": "",
+          "defaultValue": {
+            "value": "''",
+            "computed": false
+          }
+        },
+        "length": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": "",
+          "defaultValue": {
+            "value": "0",
+            "computed": false
+          }
+        },
+        "onMove": {
+          "type": {
+            "name": "func"
+          },
+          "required": false,
+          "description": ""
+        },
+        "onMoved": {
+          "type": {
+            "name": "func"
+          },
+          "required": false,
+          "description": ""
+        },
+        "origin": {
+          "type": {
+            "name": "shape",
+            "value": {
+              "x": {
+                "name": "number",
+                "required": false
+              },
+              "y": {
+                "name": "number",
+                "required": false
+              }
+            }
+          },
+          "required": false,
+          "description": "",
+          "defaultValue": {
+            "value": "{}",
+            "computed": false
+          }
+        },
+        "step": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
+        "theme": {
+          "type": {
+            "name": "shape",
+            "value": {
+              "hand": {
+                "name": "string",
+                "required": false
+              },
+              "knob": {
+                "name": "string",
+                "required": false
+              }
+            }
+          },
+          "required": false,
+          "description": ""
+        }
+      }
+    },
+    "ClockHours": {
+      "attributes": [
+        "center",
+        "format",
+        "onChange",
+        "onHandMoved",
+        "radius",
+        "selected",
+        "spacing",
+        "theme"
+      ],
+      "props": {
+        "center": {
+          "type": {
+            "name": "shape",
+            "value": {
+              "x": {
+                "name": "number",
+                "required": false
+              },
+              "y": {
+                "name": "number",
+                "required": false
+              }
+            }
+          },
+          "required": false,
+          "description": ""
+        },
+        "format": {
+          "type": {
+            "name": "enum",
+            "value": [
+              {
+                "value": "'24hr'",
+                "computed": false
+              },
+              {
+                "value": "'ampm'",
+                "computed": false
+              }
+            ]
+          },
+          "required": false,
+          "description": ""
+        },
+        "onChange": {
+          "type": {
+            "name": "func"
+          },
+          "required": false,
+          "description": ""
+        },
+        "onHandMoved": {
+          "type": {
+            "name": "func"
+          },
+          "required": false,
+          "description": ""
+        },
+        "radius": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
+        "selected": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
+        "spacing": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
+        "theme": {
+          "type": {
+            "name": "object"
+          },
+          "required": false,
+          "description": ""
+        }
+      }
+    },
+    "ClockMinutes": {
+      "attributes": [
+        "center",
+        "onChange",
+        "radius",
+        "selected",
+        "spacing",
+        "theme"
+      ],
+      "props": {
+        "center": {
+          "type": {
+            "name": "shape",
+            "value": {
+              "x": {
+                "name": "number",
+                "required": false
+              },
+              "y": {
+                "name": "number",
+                "required": false
+              }
+            }
+          },
+          "required": false,
+          "description": ""
+        },
+        "onChange": {
+          "type": {
+            "name": "func"
+          },
+          "required": false,
+          "description": "",
+          "defaultValue": {
+            "value": "null",
+            "computed": false
+          }
+        },
+        "radius": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
+        "selected": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": "",
+          "defaultValue": {
+            "value": "0",
+            "computed": false
+          }
+        },
+        "spacing": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
+        "theme": {
+          "type": {
+            "name": "shape",
+            "value": {
+              "small": {
+                "name": "string",
+                "required": false
+              }
+            }
+          },
+          "required": false,
+          "description": ""
+        }
+      }
+    }
+  }
+}
