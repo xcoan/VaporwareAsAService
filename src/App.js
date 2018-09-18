@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Grid, Button} from '@material-ui/core';
+import {Grid, Button, Paper, Typography} from '@material-ui/core';
 
 class App extends Component {
 
@@ -78,13 +78,18 @@ class App extends Component {
     return (
       <Grid container spacing={24}>
         <Grid item xs={12} />
-        <Grid item xs={12} />
-        <Grid item xs={12}>
-          {title}
+        <Grid item xs={1} />
+        <Grid item xs={10}>
+          <Paper>
+            <Typography variant="headline" component="h1">
+              {title}
+            </Typography>
+            <Typography component="p">
+              {description}
+            </Typography>
+          </Paper>
         </Grid>
-        <Grid item xs={12}>
-          {description}
-        </Grid>
+        <Grid item xs={1} />
         <Grid item xs={2} />
         <Grid item xs={3}>
           <Button
